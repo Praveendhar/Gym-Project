@@ -23,7 +23,13 @@ urlpatterns = [
     re_path('admin/', admin.site.urls),
 
     re_path(r'^$', views.index, name='index'),
-    re_path(r'^trainees/$', views.trainees, name='trainees'),
+    re_path(r'^SuperAdmin_trainees/$', views.SuperAdmin_trainees, name='SuperAdmin_trainees'),
+    re_path(r'^SuperAdmin_ActiveTrainees/$', views.SuperAdmin_ActiveTrainees, name='SuperAdmin_ActiveTrainees'),
+    re_path(r'^SuperAdmin_PassiveTrainees/$', views.SuperAdmin_PassiveTrainees, name='SuperAdmin_PassiveTrainees'),
+    re_path(r'^SuperAdmin_ActiveTraineeProfile/$', views.SuperAdmin_ActiveTraineeProfile, name='SuperAdmin_ActiveTraineeProfile'),
+    re_path(r'^SuperAdmin_PassiveTraineeProfile/$', views.SuperAdmin_PassiveTraineeProfile, name='SuperAdmin_PassiveTraineeProfile'),
+    re_path(r'^SuperAdmin_Machines/$', views.SuperAdmin_Machines, name='SuperAdmin_Machines'),
+    re_path(r'^SperAdmin_dumbell/$', views.SperAdmin_dumbell, name='SperAdmin_dumbell'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
